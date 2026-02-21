@@ -23,9 +23,9 @@ export default function Header() {
           <Image
             src="/logo.png"
             alt=""
-            width={200}
-            height={64}
-            className="h-16 w-auto"
+            width={300}
+            height={96}
+            className="h-18 w-auto"
           />
         </Link>
         <nav className="flex flex-wrap items-center justify-end gap-2 sm:gap-4" aria-label="Main">
@@ -33,7 +33,7 @@ export default function Header() {
             <Link
               key={href}
               href={href}
-              className="rounded-igem px-5 py-4 text-xl font-body text-primary-light/90 transition duration-300 hover:scale-110 hover:text-primary-light"
+              className="rounded-igem px-4 py-4 text-xl font-mono font-bold text-primary-light/90 transition duration-300 hover:scale-110 hover:text-primary-light"
             >
               {label}
             </Link>

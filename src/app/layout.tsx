@@ -18,8 +18,11 @@ const oswald = Oswald({
 })
 
 export const metadata: Metadata = {
-  title: 'UA iGEM — University of Arizona',
-  description: 'UA iGEM synthetic biology project wiki',
+  title: 'UA iGEM  Wiki',
+  description: 'UA iGEM wiki for the 2025 - 2026 season',
+  icons: {
+    icon: '/favicon.ico',
+  }
 }
 
 export default function RootLayout({
