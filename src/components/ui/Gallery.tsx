@@ -1,6 +1,6 @@
 interface GalleryProps {
   images?: { src: string; alt: string }[]
-  columns?: 2 | 3 | 4
+  columns?: 1 | 2 | 3 | 4
   className?: string
 }
 
@@ -9,11 +9,13 @@ const placeholderCount = 6
 export default function Gallery({ images, columns = 3, className = '' }: GalleryProps) {
   const count = images?.length ?? placeholderCount
   const gridClass =
-    columns === 2
-      ? 'grid-cols-1 sm:grid-cols-2'
-      : columns === 4
-        ? 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-4'
-        : 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3'
+    columns === 1
+      ? 'grid-cols-1'
+      : columns === 2
+        ? 'grid-cols-1 sm:grid-cols-2'
+        : columns === 4
+          ? 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-4'
+          : 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3'
 
   return (
     <div className={`grid gap-4 ${gridClass} ${className}`} role="list">
